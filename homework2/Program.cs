@@ -41,6 +41,7 @@ Console.WriteLine($"Second digit  of {Number} is {digit}");
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+/*
 int ThirdDigit (int number)
 {
   int result = -1;
@@ -57,3 +58,22 @@ Console.WriteLine("Случайное число" + randomNumber);
 int digit = ThirdDigit(randomNumber);
 if (digit == -1) Console.WriteLine("Третьей цифры нет");
 else Console.WriteLine($"Third digit of {randomNumber} is {digit}");
+*/
+
+// Task 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+bool WeekNumber (int number)
+{
+if  (number == 6 || number == 7) return true;
+else return false;
+}
+Console.Write ("Input any numbers from 1 to 7 ");
+int Number = Convert.ToInt32(Console.ReadLine());
+if (Number < 1 || Number > 7) Console.Write ("You are inputed not number from 1 to 7 ");
+
+else 
+if (WeekNumber(Number) == true) Console.WriteLine($"день недели под номером {Number}  - выходной");
+else Console.WriteLine($"день недели под номером {Number}  - не выходной");
