@@ -23,7 +23,7 @@ Console.WriteLine($"Second digit  of {Number} is {digit}");
 */
 
 //  Task 1. Вариант 2. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-
+/*
 int CutNumber (int number)
 {
 int digit = number / 10 % 10;
@@ -34,9 +34,26 @@ int Number = new Random().Next (100,1000);
 Console.WriteLine  ($"Зададим случайное трехзначное число  {Number}");
 int digit = CutNumber(Number);
 Console.WriteLine($"Second digit  of {Number} is {digit}");
-
+*/
 
 // Task 2. Напишите программу, которая выводит третью цифру заданного числа.
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
+
+int ThirdDigit (int number)
+{
+  int result = -1;
+  if (number >= 100)
+  {
+    while (number > 999) number = number / 10;
+    result = number % 10;
+  }
+  return result;
+}
+
+int randomNumber = new Random().Next();
+Console.WriteLine("Случайное число" + randomNumber);
+int digit = ThirdDigit(randomNumber);
+if (digit == -1) Console.WriteLine("Третьей цифры нет");
+else Console.WriteLine($"Third digit of {randomNumber} is {digit}");
